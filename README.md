@@ -11,3 +11,7 @@ PHP >= 7.3
 - php artisan key:generate
 
 - chmod -R 777 storage
+
+- php artisan:migrate
+
+- php artisan db:seed

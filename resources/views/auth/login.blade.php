@@ -3,11 +3,43 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
+
         <div class="col-md-8">
+
+
+                <div class="grid grid-cols-1 md:grid-cols-2">
+                    <div class="p-6">
+                        <div class="flex items-center">
+                            <div class="ml-4 text-lg leading-7 font-semibold"><span class="underline text-gray-900 dark:text-white">{{__('Test Credentials')}}</span></div>
+                        </div>
+
+                        <div class="ml-12">
+                                <span class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
+                                    {{__('E-Mail Address: ')}}
+                                </span>
+                            <span class="mt-2 text-sm">
+                                    admin32@gmail.com
+                                </span>
+                        </div>
+                        <div class="ml-12">
+                                <span class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
+                                    {{__('Password: ')}}
+                                </span>
+                            <span class="mt-2  text-sm">
+                                    123
+                                </span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body">
+
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
@@ -39,17 +71,17 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+{{--                        <div class="form-group row">--}}
+{{--                            <div class="col-md-6 offset-md-4">--}}
+{{--                                <div class="form-check">--}}
+{{--                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>--}}
 
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
+{{--                                    <label class="form-check-label" for="remember">--}}
+{{--                                        {{ __('Remember Me') }}--}}
+{{--                                    </label>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
 
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
@@ -57,11 +89,11 @@
                                     {{ __('Login') }}
                                 </button>
 
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
+{{--                                @if (Route::has('password.request'))--}}
+{{--                                    <a class="btn btn-link" href="{{ route('password.request') }}">--}}
+{{--                                        {{ __('Forgot Your Password?') }}--}}
+{{--                                    </a>--}}
+{{--                                @endif--}}
                             </div>
                         </div>
                     </form>
